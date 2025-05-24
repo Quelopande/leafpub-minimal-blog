@@ -1,0 +1,21 @@
+{{> header}}
+
+<section id="cover" class="cover u-flex-wrap">
+	<div class="cover-background {{#if @settings.cover}}" style="background-image: url({{url @settings.cover}}){{else}}no-cover{{/if}}"></div>
+
+	<article class="cover-wrap u-flex-aling-center">
+		{{!-- Tag name --}}
+		<h1 class="cover-title">{{L 'Not Found'}}</h1>
+		{{!-- tag description --}}
+		<p class="cover-description">
+			{{L 'The page you requested could not be found'}}
+		</p>
+	</article>
+	<a href="#ScrollBody" class="scrolltop mouse u-h-b-md"><span class="scroll"></span></a>
+</section>
+
+<main class="main" role="main">
+    
+</main>
+
+{{> footer}}

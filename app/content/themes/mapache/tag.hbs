@@ -1,0 +1,28 @@
+{{!-- Add Layout --}}
+
+{{> header}}
+
+<section id="cover" class="cover u-flex-wrap">
+	{{#tag}}
+	<div class="cover-background {{#if cover}}" style="background-image: url({{url cover}}){{else}}{{#if @settings.cover}}" style="background-image: url({{url @settings.cover}}){{else}}no-cover{{/if}}{{/if}}"></div>
+
+	<article class="cover-wrap u-flex-aling-center">
+		{{!-- Tag name --}}
+		<h1 class="cover-title">{{name}}</h1>
+		{{!-- tag description --}}
+		<p class="cover-description">
+			{{#if description}}
+				{{description}}
+			{{else}}
+				<h1>A collection of {{../pagination.total}} Articles</h1>
+			{{/if}}
+		</p>
+		{{/tag}}
+	</article>
+	<a href="#ScrollBody" class="scrolltop mouse u-h-b-md"><span class="scroll"></span></a>
+</section>
+
+{{!-- Add Loop --}}
+{{> loop}}
+
+{{> footer}}

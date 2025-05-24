@@ -1,0 +1,28 @@
+{{!-- Post author info --}}
+{{#author}}
+
+<footer class="post-author">
+	<a class="post-author-avatar" href="{{author_url}}" style="background-image:url({{#if avatar}}{{url avatar}}{{else}}{{theme_url "assets/img/user-image.png"}}{{/if}})"></a>
+	<div class="post-author-wrap">
+		{{#if bio}}
+			<p class="post-author-bio"><strong><a href="{{author_url}}">{{name}}</a> — </strong>{{bio}}</p>
+		{{else}}
+			<p class="post-author-bio">Read <a href="{{author_url}}">more posts</a> by this author.</p>
+		{{/if}}
+
+		<ul class="u-unstyled u-flex u-h-b-lg">
+			<li>
+				<h5>{{L 'CONTACT'}}</h5>
+				{{#if facebook}}<a href="https://facebook.com/{{facebook}}" title="Facebook" target="_blank"><i class="i-facebook"></i> Facebook</a>{{/if}}
+				{{#if twitter}}<a href="https://twitter.com/{{twitter}}" style="margin-left:5px" title="{{twitter}}" target="_blank"><i class="i-twitter"></i> Twitter</a>{{/if}}
+			</li>
+
+			{{#if location}}<li><h5>{{L 'LOCATION'}}</h5><span><i class="i-map"></i> {{location}}</span></li>{{/if}}
+			{{#if website}}<li><h5>{{L 'WEBSITE'}}</h5><a href="{{website}}" target="_blank">{{website}}</a></li>{{/if}}
+
+		</ul>
+
+	</div>
+</footer>
+
+{{/author}}
