@@ -18,6 +18,20 @@
 
 		{{!-- Add Sidebar --}}
 		{{> sidebar}}
-
 	</div>
+	<script>
+	function makeEntryClickable() {
+        const entries = document.querySelectorAll('.entry');
+        entries.forEach(entry => {
+            const postUrl = entry.getAttribute('data-post-url');
+            if (postUrl) {
+                entry.addEventListener('click', function() {
+                    window.location.href = postUrl;
+                });
+            }
+        });
+    }
+    
+    document.addEventListener('DOMContentLoaded', makeEntryClickable);
+	</script>
 </section>
