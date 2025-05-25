@@ -20,7 +20,7 @@
 			{{#is "image-post-format" 'in' tags}}
 				{{#if image}}
 					<figure class="col s12 post-image">
-						<img src="{{url image}}" alt="{{title}}"/>
+						<img src="{{url image}}" alt="{{title}} style="border-radius: 24px;""/>
 					</figure>
 				{{/if}}
 			{{/is}}
@@ -46,11 +46,10 @@
 
 					{{!-- Add Post Image --}}
 					{{#is tag!="#image-post-format"}}
-						{{#if image}}<figure class="post-image"><img class="post-img" src="{{url image}}" alt="{{title}}" /></figure>{{/if}}
+						{{#if image}}<figure class="post-image"><img class="post-img" src="{{url image}}" alt="{{title}}" style="border-radius: 24px;" /></figure>{{/if}}
 					{{/is}}
 
-					{{!-- Post share top --}}
-					{{> widget-post-share}}
+					{{!--{{> widget-post-share}}--}}
 
 					{{!-- Post content body --}}
 					<div class="post-body">
@@ -64,24 +63,16 @@
 						</div>
 					{{/if}}
 
-					{{!-- post Share Button and Suscribe newsletter --}}
 					<div class="row share-subscribe">
 						{{> widget-share}}
-						{{!--> widget-newsletter--}}
 					</div>
+					{{!--{{> widget-post-author}}--}}
 
-					{{!-- Post author info --}}
-					{{> widget-post-author}}
+					{{!--<div id="post-comments" class="post-comments">--}}
+					{{!--	<div id="disqus_thread" class="mapache-disqus"></div>--}}
+					{{!--	<div class="fb-comments mapache-facebook" data-href="{{post_url}}" data-width="100%" data-numposts="5"></div>--}}
+					{{!--</div>--}}
 
-					{{!-- post Comments Section --}}
-					<div id="post-comments" class="post-comments">
-						<div id="disqus_thread" class="mapache-disqus"></div>
-						{{!-- Comments section for facebook --}}
-						<div class="fb-comments mapache-facebook" data-href="{{post_url}}" data-width="100%" data-numposts="5"></div>
-					</div>
-
-					{{!-- Post Related --}}
-					{{!--> widget-post-related--}}
 				</article>
 			</div>
 

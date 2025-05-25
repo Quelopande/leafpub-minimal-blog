@@ -1345,8 +1345,6 @@ progress::-webkit-progress-bar {
  -webkit-box-flex: 0;
 }
 .row .col {
- -ms-flex: 0 0 auto;
- flex: 0 0 auto;
  padding-left: 0.9375rem;
 }
 .row .col.s1 {
@@ -1408,6 +1406,10 @@ progress::-webkit-progress-bar {
  -ms-flex-preferred-size: 100%;
  flex-basis: 100%;
  max-width: 100%;
+}
+
+.content {
+    margin-right: 15px;
 }
 @media only screen and (min-width: 766px) {
  .row .col.m1 {
@@ -2842,11 +2844,6 @@ input.search-field:focus {
 @media only screen and (max-width: 640px) {
  .post-title {
   font-size: 1.8rem;
- }
- .post-image,
- .video-responsive {
-  margin-left: -0.9375rem;
-  margin-right: -0.9375rem;
  }
 }
 .sidebar {
